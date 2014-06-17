@@ -7,7 +7,7 @@ It has been included in the Sublime Text snippets for a while but they have been
 ### Install
 ##### Mac
 ```sh
-cd ~/emmettt && git clone https://github.com/tmwagency/kickoff-emmet-snippets.git 
+cd ~/emmet && git clone https://github.com/tmwagency/kickoff-emmet-snippets.git 
 ```
 
 ### Reference
