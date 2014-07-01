@@ -35,9 +35,9 @@
 			"rg"               : "@include radial-gradient(${1:#1e5799}, ${2:#3dc3d1}, $ie: ${3:true/false});$0",
 			"op"               : "@include opacity(${1:60});$0",
 			"pf"               : "@include prefixer(${1:property}, $arg, ${2:webkit moz ms o spec});$0",
-			"rmin"             : "@include respond-min(${1:768}) {\n\t$0\n}\n",
-			"rmax"             : "@include respond-max(${1:768}) {\n\t$0\n}\n",
-			"rmm"              : "@include respond-min-max(${1:300}, ${2:800}) {\n\t$0\n}\n",
+			"rmin"             : "@include respond-min(${1:\\$breakpoint-single-col}) {\n\t$0\n}\n",
+			"rmax"             : "@include respond-max(${1:\\$breakpoint-single-col}) {\n\t$0\n}\n",
+			"rmm"              : "@include respond-min-max(${1:\\$breakpoint-narrow}, ${2:\\$breakpoint-wide}) {\n\t$0\n}\n",
 			"size"             : "@include size(${1:10}px,${2:10}px);$0",
 			"sq"               : "@include square(${1:50}px);$0",
 			"va"               : "@include vertical-align(${1:50px});$0",
@@ -48,7 +48,6 @@
 			"after"            : "&:after {\n\tcontent:'';\n\t$0\n}",
 			"before"           : "&:before {\n\tcontent:'';\n\t$0\n}",
 
-			// Vars
 			"ko-bfs"      : "\\$base-font-size",
 			"ko-sans"     : "\\$sans-font-family",
 			"ko-serif"    : "\\$serif-font-family",
@@ -65,7 +64,6 @@
 			"ko-uip"      : "\\$img-ui-path",
 			"ko-cp"       : "\\$color-primary",
 
-			// Classnames
 			"ko-un"      : ".unstyled",
 			"ko-formh"   : ".form--horizontal",
 			"ko-formi"   : ".form--inline",
@@ -82,30 +80,21 @@
 		"extends": "html",
 		"snippets": {
 
-			// Two grd columns
 			"cols"           : "<div class=\"g-row\">\n\t<div class=\"g-span${1:6} g-col\">\n\t\t$3\n\t</div>\n\t<div class=\"g-span${2:6} g-col\">\n\t\t$4\n\t</div>\n</div>$0",
 
-			// One grid column
 			"col"           : "<div class=\"g-span${1:12} g-col\">\n\t$2\n</div>$0",
 
-			// Form
 			"f"           : "<form action=\"#\"${1: class=\"form--horizontal\"}>\n\t${2:<fieldset>\n\t\t<legend>Your form</legend>}\n\t\t$3\n\t</fieldset>\n\t$0\n</form>",
 
-			// Form item
 			"fi"           : "<li class=\"form-controlGroup\">\n\t<label for=\"${1:name}\" class=\"form-controlGroup-label\">${2:Label}</label>\n\t<div class=\"form-controlGroup-input\">\n\t\t<input type=\"${3:text}\" id=\"$1\"${4: placeholder=\"Placeholder text\"} />\n\t</div>\n</li>\n$0\n",
 
-			// Multiple form elements
 			"fg"           : "<ul>\n\t<li class=\"form-controlGroup\">\n\t\t<label for=\"name\" class=\"form-controlGroup-label\">Name</label>\n\t\t<div class=\"form-controlGroup-input\">\n\t\t\t<input type=\"text\" id=\"name\" placeholder=\"Zander Martineau\" />\n\t\t</div>\n\t</li>\n\t<li class=\"form-controlGroup\">\n\t\t<label for=\"email\" class=\"form-controlGroup-label\">Email</label>\n\t\t<div class=\"form-controlGroup-input\">\n\t\t\t<input type=\"email\" id=\"email\" placeholder=\"steve@apple.com\" />\n\t\t</div>\n\t</li>\n\t<li class=\"form-controlGroup\">\n\t\t<label for=\"phone\" class=\"form-controlGroup-label\">Phone</label>\n\t\t<div class=\"form-controlGroup-input\">\n\t\t\t<input type=\"number\" id=\"phone\" placeholder=\"020 123 4567\" />\n\t\t</div>\n\t</li>\n\t<li class=\"form-controlGroup\">\n\t\t<label for=\"comments\" class=\"form-controlGroup-label\">Comments <br>\n\t\t\t<small>This is a description</small>\n\t\t</label>\n\t\t<div class=\"form-controlGroup-input\">\n\t\t\t<textarea id=\"comments\" rows=\"3\" cols=\"50\"></textarea>\n\t\t</div>\n\t</li>\n</ul>\n",
 
-			// Form note
 			"note"           : "<span class=\"form-note\">?<span>First name &amp; last name</span></span>",
 
-			// Grid row
 			"row"           : "<div class=\"g-row\">\n\t$0\n</div>",
 
-			// Tabs
 			"tabs"           : "<ul class=\"tabs\">\n\t<li>\n\t\t<a href=\"#tab_1\" class=\"is-active\">${1:Tab 1}</a>\n\t</li>\n\t<li>\n\t\t<a href=\"#tab_2\">${2:Tab 2}</a>\n\t</li>\n</ul>\n<ul class=\"l-tabsContent${3: contained}\">\n\t<li id=\"tab_1\" class=\"is-active\">\n\t\t<h3>$1 content</h3>\n\t\t<p>Pellentesque</p>\n\t</li>\n\t<li id=\"tab_2\">\n\t\t<h3>$2 content</h3>\n\t\t<p>Lorem ipsum</p>\n\t</li>\n</ul>"
-			// ""           : "",
 		}
-	},
+	}
 }
